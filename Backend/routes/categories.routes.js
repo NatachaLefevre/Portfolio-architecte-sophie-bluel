@@ -8,3 +8,10 @@ router.get('/', categoriesCtrl.findAll);
 
 
 module.exports = router;
+fetch('http://localhost:5678/api/works')
+  .then(function (response) {
+    // Traitement de la réponse ici
+  })
+  .catch(function (error) {
+    // Gestion des erreurs ici
+  });
