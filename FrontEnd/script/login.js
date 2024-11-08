@@ -21,14 +21,15 @@ form.addEventListener('submit', (event) => {
     };
 
     function afficherMessageErreur() {
-        var element = document.getElementById("errorMessage");
-        var message = element.getAttribute("data-error-message");
-        element.classList.remove("hidden"); // Enlève la classe "hidden" pour afficher le message d'erreur
+        var element = document.getElementById('errorMessage');
+        element.classList.add('visible'); 
+        // Pour afficher le message d'erreur si on tape les mauvais identifiants
       }
-
+      
       function cacherMessageErreur() {
-        var element = document.getElementById("errorMessage");
-        element.classList.add("hidden");
+        var element = document.getElementById('errorMessage');
+        element.classList.remove('visible');
+        // Le message d'erreur est masqué par défaut
       }
 
     // Envoyer les données à un serveur (ex. en utilisant Fetch API ou une bibliothèque comme Axios)
